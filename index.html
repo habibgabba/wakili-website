@@ -123,10 +123,10 @@
       position: relative;
       overflow: hidden;
       background:
-        radial-gradient(circle at 10% 20%, rgba(212,175,55,.16), transparent 30%),
-        radial-gradient(circle at 90% 80%, rgba(212,175,55,.10), transparent 28%),
-        var(--black);
+        linear-gradient(90deg, rgba(3,18,36,.92) 0%, rgba(5,34,66,.78) 45%, rgba(4,16,31,.58) 100%),
+        url("office-team.svg") center/cover no-repeat;
       color: white;
+      min-height: 720px;
     }
 
     .hero::after {
@@ -139,7 +139,7 @@
     }
 
     .hero-grid {
-      min-height: 610px;
+      min-height: 720px;
       display: grid;
       grid-template-columns: 1.1fr .9fr;
       align-items: center;
@@ -170,6 +170,8 @@
 
     .hero h1 {
       font-size: clamp(38px, 5vw, 65px);
+      font-weight: 900;
+      text-shadow: 0 3px 20px rgba(0,0,0,.32);
       line-height: 1.15;
       margin: 0 0 20px;
       letter-spacing: -.8px;
@@ -179,6 +181,7 @@
 
     .hero p {
       max-width: 650px;
+      text-shadow: 0 2px 12px rgba(0,0,0,.25);
       margin: 0 0 28px;
       color: #d0d0d0;
       font-size: 18px;
@@ -219,7 +222,8 @@
 
     /* Phone mockup */
     .phone-wrap {
-      display: flex;
+      display: none;
+      flex: 0 0 auto;
       justify-content: center;
       align-items: center;
     }
@@ -585,6 +589,8 @@
         text-align: center;
         gap: 35px;
       }
+
+      .phone-wrap { display: none; }
 
       .hero p { margin-left: auto; margin-right: auto; }
       .hero-actions { justify-content: center; }
