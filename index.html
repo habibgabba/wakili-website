@@ -71,6 +71,23 @@ linear-gradient(90deg,rgba(2,18,38,.94) 0%,rgba(3,30,60,.76) 42%,rgba(2,14,29,.2
 .section h2{font-size:clamp(30px,4vw,44px);margin:8px 0 10px}
 .section-head p{color:#718198;margin:0}.dark .section-head p{color:#b8c7d7}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product-card{background:#fff;border:1px solid #e4eaf1;border-radius:24px;overflow:hidden;box-shadow:0 12px 35px rgba(20,50,80,.08);transition:.25s}
+.product-card:hover{transform:translateY(-5px);box-shadow:0 20px 45px rgba(20,50,80,.14)}
+.product-img{height:170px;background:linear-gradient(135deg,#0a2140,#087cff);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.product-img img{width:100%;height:100%;object-fit:cover}
+.product-placeholder{font-size:42px;font-weight:900;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.3)}
+.product-body{padding:17px;text-align:right}
+.product-body h3{margin:0 0 6px;font-size:19px}
+.product-price{font-size:20px;font-weight:900;color:#087cff}
+.product-type{font-size:12px;color:#7b8a9d;margin-top:3px}
+.product-btn{display:flex;margin-top:13px;justify-content:center;padding:10px 14px;border-radius:12px;background:#eef7ff;color:#087cff;font-weight:900}
+.category-title{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:38px 0 18px}
+.category-title h3{margin:0;font-size:26px}.category-title span{color:#7b8a9d;font-size:13px}
+@media(max-width:1000px){.products{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.products{grid-template-columns:repeat(2,1fr)}.product-img{height:140px}}
+@media(max-width:480px){.products{grid-template-columns:1fr 1fr}.product-body h3{font-size:16px}.product-price{font-size:17px}}
+
 .card{background:#fff;border:1px solid #e4eaf1;border-radius:24px;padding:28px;box-shadow:0 12px 35px rgba(20,50,80,.07);transition:.25s}
 .card:hover{transform:translateY(-5px);box-shadow:0 20px 45px rgba(20,50,80,.13)}
 .card-icon{width:58px;height:58px;border-radius:17px;display:grid;place-items:center;background:#edf7ff;font-size:28px;margin-bottom:15px}
@@ -126,7 +143,7 @@ footer strong{color:#fff}
 <div class="brand-name"><strong>وكيلي <span>ستور</span></strong><small>WAKILI STORE</small></div>
 </a>
 <nav class="nav-links">
-<a href="#home">الرئيسية</a><a href="#services">الخدمات</a><a href="#about">عن وكيلي</a><a href="#how">كيف يعمل؟</a><a href="#contact">تواصل معنا</a>
+<a href="#home">الرئيسية</a><a href="#services">الخدمات</a><a href="#cards">البطاقات</a><a href="#about">عن وكيلي</a><a href="#how">كيف يعمل؟</a><a href="#contact">تواصل معنا</a>
 </nav>
 <a class="nav-download" href="#download">⬇ تحميل تطبيق وكيلي</a>
 </div>
@@ -166,6 +183,46 @@ footer strong{color:#fff}
 <article class="card"><div class="card-icon">🍎</div><h3>بطاقات Apple</h3><p>بطاقات إلكترونية للخدمات والاستخدامات الرقمية.</p></article>
 <article class="card"><div class="card-icon">🎁</div><h3>العروض والمكافآت</h3><p>عروض وحوافز مخصصة للوكلاء.</p></article>
 </div></div>
+</section>
+
+
+<section class="section" id="cards">
+<div class="container">
+<div class="section-head"><div class="kicker">بطاقات وكيلي</div><h2>بطاقات الشحن المتوفرة</h2><p>فئات مختارة من بطاقات زين وآسياسيل للوكلاء.</p></div>
+
+<div class="category-title"><h3>بطاقات زين</h3><span>فئات التعبئة</span></div>
+<div class="products">
+<div class="product-card"><div class="product-img"><img src="https://ha55a.com/imgs/0cbc4986-9a51-46af-a8c7-817d011ea33c.png" alt="بطاقة زين 10,000"></div><div class="product-body"><h3>زين 10,000</h3><div class="product-price">10,000 د.ع</div><div class="product-type">بطاقة شحن زين</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+<div class="product-card"><div class="product-img"><div class="product-placeholder">5,000</div></div><div class="product-body"><h3>زين 5,000</h3><div class="product-price">5,000 د.ع</div><div class="product-type">بطاقة شحن زين</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+<div class="product-card"><div class="product-img"><div class="product-placeholder">15,000</div></div><div class="product-body"><h3>زين 15,000</h3><div class="product-price">15,000 د.ع</div><div class="product-type">بطاقة شحن زين</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+<div class="product-card"><div class="product-img"><div class="product-placeholder">18,000</div></div><div class="product-body"><h3>زين 18,000</h3><div class="product-price">18,000 د.ع</div><div class="product-type">بطاقة شحن زين</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+<div class="product-card"><div class="product-img"><div class="product-placeholder">25,000</div></div><div class="product-body"><h3>زين 25,000</h3><div class="product-price">25,000 د.ع</div><div class="product-type">بطاقة شحن زين</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+<div class="product-card"><div class="product-img"><div class="product-placeholder">35,000</div></div><div class="product-body"><h3>زين 35,000</h3><div class="product-price">35,000 د.ع</div><div class="product-type">بطاقة شحن زين</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+<div class="product-card"><div class="product-img"><div class="product-placeholder">50,000</div></div><div class="product-body"><h3>زين 50,000</h3><div class="product-price">50,000 د.ع</div><div class="product-type">بطاقة شحن زين</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+</div>
+
+<div class="category-title"><h3>زين سوبر كارد</h3><span>باقات دقائق + إنترنت + رسائل</span></div>
+<div class="products">
+<div class="product-card"><div class="product-img"><div class="product-placeholder">25,000</div></div><div class="product-body"><h3>Super Card 25</h3><div class="product-price">25,000 د.ع</div><div class="product-type">8GB + 500 دقيقة + 500 رسالة</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+<div class="product-card"><div class="product-img"><div class="product-placeholder">35,000</div></div><div class="product-body"><h3>Super Card 35</h3><div class="product-price">35,000 د.ع</div><div class="product-type">20GB + 720 دقيقة + 720 رسالة</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+</div>
+
+<div class="category-title"><h3>بطاقات آسياسيل</h3><span>فئات التعبئة</span></div>
+<div class="products">
+<div class="product-card"><div class="product-img"><img src="https://www.ha55a.com/Imgs/bd0f8ba5-1667-4ac9-b45a-5779f64f614b.png" alt="بطاقة آسياسيل 5,000"></div><div class="product-body"><h3>آسياسيل 5,000</h3><div class="product-price">5,000 د.ع</div><div class="product-type">بطاقة شحن آسياسيل</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+<div class="product-card"><div class="product-img"><div class="product-placeholder">3,000</div></div><div class="product-body"><h3>آسياسيل 3,000</h3><div class="product-price">3,000 د.ع</div><div class="product-type">بطاقة شحن آسياسيل</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+<div class="product-card"><div class="product-img"><div class="product-placeholder">10,000</div></div><div class="product-body"><h3>آسياسيل 10,000</h3><div class="product-price">10,000 د.ع</div><div class="product-type">بطاقة شحن آسياسيل</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+<div class="product-card"><div class="product-img"><div class="product-placeholder">15,000</div></div><div class="product-body"><h3>آسياسيل 15,000</h3><div class="product-price">15,000 د.ع</div><div class="product-type">بطاقة شحن آسياسيل</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+<div class="product-card"><div class="product-img"><div class="product-placeholder">40,000</div></div><div class="product-body"><h3>آسياسيل 40,000</h3><div class="product-price">40,000 د.ع</div><div class="product-type">بطاقة شحن آسياسيل</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+<div class="product-card"><div class="product-img"><div class="product-placeholder">50,000</div></div><div class="product-body"><h3>آسياسيل 50,000</h3><div class="product-price">50,000 د.ع</div><div class="product-type">بطاقة شحن آسياسيل</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+</div>
+
+<div class="category-title"><h3>آسياسيل MAX CARD</h3><span>باقات إنترنت + دقائق + رسائل</span></div>
+<div class="products">
+<div class="product-card"><div class="product-img"><div class="product-placeholder">25,000</div></div><div class="product-body"><h3>MAX CARD 25</h3><div class="product-price">25,000 د.ع</div><div class="product-type">8GB + 500 دقيقة + 500 رسالة</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+<div class="product-card"><div class="product-img"><div class="product-placeholder">35,000</div></div><div class="product-body"><h3>MAX CARD 35</h3><div class="product-price">35,000 د.ع</div><div class="product-type">20GB + 720 دقيقة + 720 رسالة</div><a class="product-btn" href="#contact">طلب البطاقة</a></div></div>
+</div>
+</div>
 </section>
 
 <section class="section dark" id="about">
